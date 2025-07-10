@@ -1,0 +1,18 @@
+module p_encoder (
+    input  [7:0]pin,
+    output reg [2:0] pout
+);
+
+always @(*) begin
+    if (pin[7])       pout = 3'd7;
+    else if (pin[6])  pout = 3'd6;
+    else if (pin[5])  pout  = 3'd5;
+    else if (pin[4])  pout= 3'd4;
+    else if (pin[3])  pout = 3'd3;
+    else if (pin[2])  pout = 3'd2;
+    else if (pin[1])  pout = 3'd1;
+    else if (pin[0])  pout = 3'd0;
+    else             pout  = 3'd0;  
+end
+
+endmodule
